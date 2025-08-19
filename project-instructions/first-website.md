@@ -1114,20 +1114,7 @@ These sites have free components like hero sections, cards, forms, and photo gal
 
 Want to try something cool? Here's how to add a photo gallery that automatically adjusts to different screen sizes:
 
-```html
-<!-- Add this in your content section -->
-<div class="mt-8">
-  <h3 class="text-2xl font-bold mb-4">My Photo Gallery</h3>
-  <div class="flex flex-wrap gap-4">
-    <img src="https://picsum.photos/200/200?random=1" alt="Photo 1" class="w-32 h-32 object-cover rounded-lg shadow-md">
-    <img src="https://picsum.photos/200/200?random=2" alt="Photo 2" class="w-32 h-32 object-cover rounded-lg shadow-md">
-    <img src="https://picsum.photos/200/200?random=3" alt="Photo 3" class="w-32 h-32 object-cover rounded-lg shadow-md">
-    <img src="https://picsum.photos/200/200?random=4" alt="Photo 4" class="w-32 h-32 object-cover rounded-lg shadow-md">
-    <img src="https://picsum.photos/200/200?random=5" alt="Photo 5" class="w-32 h-32 object-cover rounded-lg shadow-md">
-    <img src="https://picsum.photos/200/200?random=6" alt="Photo 6" class="w-32 h-32 object-cover rounded-lg shadow-md">
-  </div>
-</div>
-```
+
 
 This uses **flexbox** (`flex flex-wrap`) to automatically arrange photos in rows. The photos wrap to new lines when there's no space, making it work perfectly on phones and computers!
 
