@@ -1,6 +1,6 @@
 body {
-    background: rgb(124, 124, 124);
-    color: rgb(45, 45, 45);
+    background: rgb(29, 66, 28);
+    color: rgb(255, 255, 255);
     padding: 10px;
     font-family: Arial, sans-serif;
 }
@@ -12,7 +12,7 @@ body {
 
 /* navigation menu */
 nav {
-    background: rgb(255, 0, 0);
+    background: rgb(58, 119, 72);
     margin: 0 auto;
     display: flex;
     padding: 10px;
@@ -22,7 +22,7 @@ nav {
 h1 {
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     flex: 1;
     margin: 0;
 }
@@ -32,6 +32,7 @@ h1 {
     margin: 0;
     padding: 0;
     display: flex;
+    color:#338146
 }
 
 .nav-li {
@@ -46,7 +47,7 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(255, 255, 255);
+    background: rgb(58, 119, 72);
     display: flex;
     margin-top: 20px;
 }
@@ -57,7 +58,7 @@ main {
 }
 
 .sidebar-img {
-    width: 200px;
+    width: 150px;
 }
 
 .content {
@@ -77,7 +78,7 @@ h2, h3 {
 }
 /* Portfolio styles */
 .content h1 {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 #portfolio {
@@ -98,7 +99,7 @@ h2, h3 {
 
 #portfolio a {
   text-decoration: none;
-  color: #454545;
+  color: #000000;
 }
 /* responsive web design */
 @media screen and (min-width: 120px) and (max-width: 1080px) {
