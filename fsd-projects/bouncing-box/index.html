@@ -45,7 +45,7 @@
         var boardWidth = board.width(); // the maximum X-Coordinate of the screen
         var boardHeight = jQuery(window).height(); 
 var randNum = Math.random() * 1000;
-var randNum2 = Math.random() * 1000;
+var randNum2 = Math.random() * 500;
 var purple = "Purple"
         // update the boardWidth variable when the window is resized
         jQuery(window).on("resize", function () {
@@ -109,17 +109,20 @@ if(positionY <= 0){
   
         function handleBoxClick(){
 positionX = randNum;
-positionY = randNum2;
+positionY = 50;
 changeBoxText(points)
 points = points + 1
 speed = 3 * points + 10;
- }
 
+ }
+if(score = 67){
+  alert(tuff)
+}
 
 
         
 })();
     </script>
-    <marquee> Is this tuff?</marquee>
   </body>
+  <marquee> 67</marquee>
 </html>
