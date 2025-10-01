@@ -120,9 +120,42 @@
             from {opacity: .4}
             to {opacity: 1}
             }
+            .click-circle {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        pointer-events: none;
+        border-radius: 50%;
+        background: rgba(0, 255, 0, 0.5);
+        transform: scale(0);
+        animation: pop 0.6s ease-out forwards;
+        z-index: 9999;
+    }
+    @keyframes pop {
+        to {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
          </style>
     </head>
-    
+    <script>
+              document.addEventListener('DOMContentLoaded', function () {
+        document.body.addEventListener('click', function(e) {
+            // Create the circle
+            var circle = document.createElement('div');
+            circle.className = 'click-circle';
+            circle.style.left = (e.pageX - 25) + 'px';
+            circle.style.top = (e.pageY - 25) + 'px';
+            document.body.appendChild(circle);
+
+            // Remove after animation
+            circle.addEventListener('animationend', function() {
+                circle.parentNode.removeChild(circle);
+            });
+        });
+    });
+    </script>
     <body>
         <div id="all-contents">
             <nav>
@@ -135,6 +168,7 @@
                         <a id="navanchor" href="portfolio.html">Portfolio</a>
                         </li>
                     <li class="nav-li"><a id="navanchor" href="images.html">Images</a>
+                        <li class="nav-li"> <a href="Green.html"> Green</a></li>
                   </li>
                 </ul>
             </nav>

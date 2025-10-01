@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.body.addEventListener('click', function(e) {
+            // Create the circle
+            var circle = document.createElement('div');
+            circle.className = 'click-circle';
+            circle.style.left = (e.pageX - 25) + 'px';
+            circle.style.top = (e.pageY - 25) + 'px';
+            document.body.appendChild(circle);
+
+            // Remove after animation
+            circle.addEventListener('animationend', function() {
+                circle.parentNode.removeChild(circle);
+            });
+        });
+    });
+    </script>
     <title>Darren's Website</title>
      <link rel="stylesheet" href="style.css" />
   </head>

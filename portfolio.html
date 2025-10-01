@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.body.addEventListener('click', function(e) {
+            // Create the circle
+            var circle = document.createElement('div');
+            circle.className = 'click-circle';
+            circle.style.left = (e.pageX - 25) + 'px';
+            circle.style.top = (e.pageY - 25) + 'px';
+            document.body.appendChild(circle);
+
+            // Remove after animation
+            circle.addEventListener('animationend', function() {
+                circle.parentNode.removeChild(circle);
+            });
+        });
+    });
+    </script>
     <title>Darren's website</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -9,12 +26,13 @@
     <!-- All content goes here -->
     <div id="all-contents">
       <nav>
-<h1> THE Amazing Website</h1>
-<ul id="nav-ul">
-<li class="nav-li">
-  <a href="index.html">Home</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="Images.html">Gallery</a>
+<h1> THE Website</h1>
+<ul id="nav-lu">
+
+ <li class="nav-li"> <a href="index.html">Home</a>  </li>
+  <li class="nav-li"></li><a href="portfolio.html">Portfolio </a>  </li>
+ <li class="nav-li"></li> <a href="Images.html">Gallery</a> </li>
+  <li class="nav-li"> <a href="Green.html"> Green</a></li>
 </li>
     </ul>
   </nav>

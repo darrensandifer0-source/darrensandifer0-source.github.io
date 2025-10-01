@@ -8,10 +8,42 @@
         if(green === "green"){
             document.getElementById("result").innerHTML = "Correct, this website is Green!";
         }
+         else if(green === "Green"){
+            document.getElementById("result").innerHTML = "Correct, this website is Green!";
+        }
+         else if(green === "purple"){
+            document.getElementById("result").innerHTML = "Maybe 🤔";
+        }
+        else if(green === "Purple"){
+            document.getElementById("result").innerHTML = "Maybe 🤔";
+        }
+        else if(green === "Forest green"){
+            document.getElementById("result").innerHTML = "Nope, just green";
+        }
+        else if(green === "forest green"){
+            document.getElementById("result").innerHTML = "Nope, just green";
+        }
         else{
             document.getElementById("result").innerHTML = "Incorrect, this website is green";
         }
     }
+
+
+     document.addEventListener('DOMContentLoaded', function () {
+        document.body.addEventListener('click', function(e) {
+            // Create the circle
+            var circle = document.createElement('div');
+            circle.className = 'click-circle';
+            circle.style.left = (e.pageX - 25) + 'px';
+            circle.style.top = (e.pageY - 25) + 'px';
+            document.body.appendChild(circle);
+
+            // Remove after animation
+            circle.addEventListener('animationend', function() {
+                circle.parentNode.removeChild(circle);
+            });
+        });
+    });
 </script>
 <style>
     input, textarea {
@@ -27,6 +59,23 @@
         background-color: aliceblue;
         color:green;
     }
+    .click-circle {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        pointer-events: none;
+        border-radius: 50%;
+        background: rgba(0, 255, 0, 0.5);
+        transform: scale(0);
+        animation: pop 0.6s ease-out forwards;
+        z-index: 9999;
+    }
+    @keyframes pop {
+        to {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
 </style>
 </head>
 <body>
@@ -41,25 +90,25 @@
         <marquee>This page of the website might be green🤔 </marquee> 
         <div id="result"></div> <!-- This is where the message will appear -->
         <div class ="questions">
-            <hr style="border: 2px solid green; width: 10000;">
-            <h3>Are you Green?</h3>
-            <p>(click directly on box)</p>
-            <input type="checkbox" id="isGreen" name="isGreen">
-            <label for="isGreen">Yes, I am green!</label>
-            <br><input type="checkbox" id="isGreen" name="isGreen">
-            <label for="isGreen">No, I am  not green.</label>
-            <br><input type="checkbox" id="isGreen" name="isGreen">
-            <label for="isGreen">Maybe, I won't say.</label>
-            <hr style="border: 2px solid green; width: 10000;">
+            <hr style="border: 2px solid green; width: 1290;">
+             <h3>Are you Green?</h3>
+               <p>(click directly on box)</p>
+                <input type="checkbox" id="isGreen" name="isGreen">
+                 <label for="isGreen">Yes, I am green!</label>
+                   <br><input type="checkbox" id="isGreen" name="isGreen">
+                    <label for="isGreen">No, I am  not green.</label>
+                        <br><input type="checkbox" id="isGreen" name="isGreen">
+                           <label for="isGreen">Maybe, I won't say.</label>
+                              <hr style="border: 2px solid green; width: 1290;">
             <p><h3> If not, why</h3></p>
-            <p>(click directly on box)</p>
-            <input type="checkbox" id="" name="whyNotGreen">
-            <label for="whyNotGreen">Because I dont feel like it.</label>
-            <br><input type="checkbox" id="whyNotGreen" name="whyNotGreen">
-            <label for="whyNotGreen">Because Im a bad person.</label>
-            <br><input type="checkbox" id="whyNotGreen" name="whyNotGreen">
-            <label for="whyNotGreen">I won't say.</label>
-            <hr style="border: 2px solid green; width: 10000;"> 
+              <p>(click directly on box)</p>
+                <input type="checkbox" id="" name="whyNotGreen">
+                   <label for="whyNotGreen">Because I dont feel like it.</label>
+                      <br><input type="checkbox" id="whyNotGreen" name="whyNotGreen">
+                      <label for="whyNotGreen">Because Im a bad person.</label>
+                       <br><input type="checkbox" id="whyNotGreen" name="whyNotGreen">
+                       <label for="whyNotGreen">I won't say.</label>
+                          <hr style="border: 2px solid green; width: 1290;"> 
         </div>
     </div>
 </body>
